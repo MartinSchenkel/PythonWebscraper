@@ -1,0 +1,470 @@
+[
+	{
+		"username": "Botsling",
+		"rocketleaguestats":
+		{
+			"wins": 0,
+			"goalshotratio": 0.0,
+			"goals": 0,
+			"shots": 0,
+			"assists": 0,
+			"saves": 0,
+			"mvps": 0,
+			"rank1s": "",
+			"mmr1s": 0,
+			"rank2s": "",
+			"mmr2s": 0,
+			"rank3s": "",
+			"mmr3s": 0
+		},
+		"valorantstats":
+		{
+			"adr": 0.0,
+			"kr": 0.0,
+			"kd": 0.0,
+			"hsper": 0,
+			"winper": 0.0,
+			"wins": 0,
+			"kills": 0,
+			"deaths": 0,
+			"assists": 0,
+			"headshots": 0,
+			"aces": 0,
+			"topagent": "",
+			"topweapon": "",
+			"rating": ""
+		},
+		"csgostats":
+		{
+			"wins": 835,
+			"kd": 0.95,
+			"kills": 37578,
+			"winper": 43.1,
+			"mvps": 3429,
+			"shotaccuracy": 15.9,
+			"moneyearned": 117347400,
+			"topWeapon": "AK-47"
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "",
+			"flexqrank": ""
+		}
+	},
+	{
+		"username": "Breyy",
+		"rocketleaguestats":
+		{
+			"wins": 1000,
+			"goalshotratio": 45.4,
+			"goals": 2058,
+			"shots": 4536,
+			"assists": 954,
+			"saves": 1244,
+			"mvps": 390,
+			"rank1s": "Diamond II Division I",
+			"mmr1s": 877,
+			"rank2s": "Diamond I Division II",
+			"mmr2s": 954,
+			"rank3s": "Diamond II Division IV",
+			"mmr3s": 1117
+		},
+		"valorantstats":
+		{
+			"adr": 0.0,
+			"kr": 0.0,
+			"kd": 0.0,
+			"hsper": 0,
+			"winper": 0.0,
+			"wins": 0,
+			"kills": 0,
+			"deaths": 0,
+			"assists": 0,
+			"headshots": 0,
+			"aces": 0,
+			"topagent": "",
+			"topweapon": "",
+			"rating": ""
+		},
+		"csgostats":
+		{
+			"wins": 581,
+			"kd": 1.91,
+			"kills": 37231,
+			"winper": 53.3,
+			"mvps": 5110,
+			"shotaccuracy": 23.2,
+			"moneyearned": 66135417,
+			"topWeapon": "AK-47"
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "Unranked",
+			"flexqrank": "Unranked"
+		}
+	},
+	{
+		"username": "Maddisch",
+		"rocketleaguestats":
+		{
+			"wins": 3315,
+			"goalshotratio": 48.1,
+			"goals": 9756,
+			"shots": 20300,
+			"assists": 3681,
+			"saves": 5022,
+			"mvps": 1104,
+			"rank1s": "Diamond I Division IV",
+			"mmr1s": 859,
+			"rank2s": "Champion I Division III",
+			"mmr2s": 1267,
+			"rank3s": "Diamond III Division III",
+			"mmr3s": 1184
+		},
+		"valorantstats":
+		{
+			"adr": 121.4,
+			"kr": 0.0,
+			"kd": 0.81,
+			"hsper": 17.0,
+			"winper": 27.3,
+			"wins": 3,
+			"kills": 130,
+			"deaths": 160,
+			"assists": 45,
+			"headshots": 58,
+			"aces": 7,
+			"topagent": "Cypher",
+			"topweapon": "Vandal",
+			"rating": "Unrated"
+		},
+		"csgostats":
+		{
+			"wins": 695,
+			"kd": 0.89,
+			"kills": 35407,
+			"winper": 38.1,
+			"mvps": 3962,
+			"shotaccuracy": 18.6,
+			"moneyearned": 102384250,
+			"topWeapon": "AWP"
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "Bronze 4",
+			"flexqrank": "Unranked"
+		}
+	},
+	{
+		"username": "Maku",
+		"rocketleaguestats":
+		{
+			"wins": 229,
+			"goalshotratio": 54.3,
+			"goals": 579,
+			"shots": 1067,
+			"assists": 250,
+			"saves": 266,
+			"mvps": 44,
+			"rank1s": "Silver III Division II",
+			"mmr1s": 411,
+			"rank2s": "Gold I Division II",
+			"mmr2s": 503,
+			"rank3s": "Gold III Division I",
+			"mmr3s": 615
+		},
+		"valorantstats":
+		{
+			"adr": 0.0,
+			"kr": 0.0,
+			"kd": 0.0,
+			"hsper": 0,
+			"winper": 0.0,
+			"wins": 0,
+			"kills": 0,
+			"deaths": 0,
+			"assists": 0,
+			"headshots": 0,
+			"aces": 0,
+			"topagent": "",
+			"topweapon": "",
+			"rating": ""
+		},
+		"csgostats":
+		{
+			"wins": 0,
+			"kd": 0.0,
+			"kills": 0,
+			"winper": 0.0,
+			"mvps": 0,
+			"shotaccuracy": 0.0,
+			"moneyearned": 0,
+			"topWeapon": ""
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "",
+			"flexqrank": ""
+		}
+	},
+	{
+		"username": "Mistersauber",
+		"rocketleaguestats":
+		{
+			"wins": 0,
+			"goalshotratio": 0.0,
+			"goals": 0,
+			"shots": 0,
+			"assists": 0,
+			"saves": 0,
+			"mvps": 0,
+			"rank1s": "",
+			"mmr1s": 0,
+			"rank2s": "",
+			"mmr2s": 0,
+			"rank3s": "",
+			"mmr3s": 0
+		},
+		"valorantstats":
+		{
+			"adr": 0.0,
+			"kr": 0.0,
+			"kd": 0.0,
+			"hsper": 0,
+			"winper": 0.0,
+			"wins": 0,
+			"kills": 0,
+			"deaths": 0,
+			"assists": 0,
+			"headshots": 0,
+			"aces": 0,
+			"topagent": "",
+			"topweapon": "",
+			"rating": ""
+		},
+		"csgostats":
+		{
+			"wins": 0,
+			"kd": 0.0,
+			"kills": 0,
+			"winper": 0.0,
+			"mvps": 0,
+			"shotaccuracy": 0.0,
+			"moneyearned": 0,
+			"topWeapon": ""
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "",
+			"flexqrank": ""
+		}
+	},
+	{
+		"username": "Pattifix",
+		"rocketleaguestats":
+		{
+			"wins": 2935,
+			"goalshotratio": 49.6,
+			"goals": 8796,
+			"shots": 17748,
+			"assists": 2817,
+			"saves": 6149,
+			"mvps": 1674,
+			"rank1s": "Diamond III Division II",
+			"mmr1s": 954,
+			"rank2s": "Champion I Division IV",
+			"mmr2s": 1299,
+			"rank3s": "Diamond II Division IV",
+			"mmr3s": 1108
+		},
+		"valorantstats":
+		{
+			"adr": 0.0,
+			"kr": 0.0,
+			"kd": 0.0,
+			"hsper": 0,
+			"winper": 0.0,
+			"wins": 0,
+			"kills": 0,
+			"deaths": 0,
+			"assists": 0,
+			"headshots": 0,
+			"aces": 0,
+			"topagent": "",
+			"topweapon": "",
+			"rating": ""
+		},
+		"csgostats":
+		{
+			"wins": 1307,
+			"kd": 1.16,
+			"kills": 73075,
+			"winper": 41.5,
+			"mvps": 9336,
+			"shotaccuracy": 19.7,
+			"moneyearned": 128393816,
+			"topWeapon": "AK-47"
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "Bronze 4",
+			"flexqrank": "Unranked"
+		}
+	},
+	{
+		"username": "Rainingstorm",
+		"rocketleaguestats":
+		{
+			"wins": 814,
+			"goalshotratio": 52.9,
+			"goals": 2352,
+			"shots": 4445,
+			"assists": 728,
+			"saves": 977,
+			"mvps": 99,
+			"rank1s": "Platinum II Division I",
+			"mmr1s": 681,
+			"rank2s": "Diamond I Division III",
+			"mmr2s": 991,
+			"rank3s": "Platinum II Division II",
+			"mmr3s": 807
+		},
+		"valorantstats":
+		{
+			"adr": 0.0,
+			"kr": 0.0,
+			"kd": 0.0,
+			"hsper": 0,
+			"winper": 0.0,
+			"wins": 0,
+			"kills": 0,
+			"deaths": 0,
+			"assists": 0,
+			"headshots": 0,
+			"aces": 0,
+			"topagent": "",
+			"topweapon": "",
+			"rating": ""
+		},
+		"csgostats":
+		{
+			"wins": 0,
+			"kd": 0.0,
+			"kills": 0,
+			"winper": 0.0,
+			"mvps": 0,
+			"shotaccuracy": 0.0,
+			"moneyearned": 0,
+			"topWeapon": ""
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "Gold 2",
+			"flexqrank": "Unranked"
+		}
+	},
+	{
+		"username": "Stachosson",
+		"rocketleaguestats":
+		{
+			"wins": 0,
+			"goalshotratio": 0.0,
+			"goals": 0,
+			"shots": 0,
+			"assists": 0,
+			"saves": 0,
+			"mvps": 0,
+			"rank1s": "",
+			"mmr1s": 0,
+			"rank2s": "",
+			"mmr2s": 0,
+			"rank3s": "",
+			"mmr3s": 0
+		},
+		"valorantstats":
+		{
+			"adr": 112.6,
+			"kr": 0.0,
+			"kd": 0.75,
+			"hsper": 16.0,
+			"winper": 48.9,
+			"wins": 106,
+			"kills": 2399,
+			"deaths": 3191,
+			"assists": 903,
+			"headshots": 1230,
+			"aces": 123,
+			"topagent": "Brimstone",
+			"topweapon": "Phantom",
+			"rating": "1.03"
+		},
+		"csgostats":
+		{
+			"wins": 177,
+			"kd": 0.63,
+			"kills": 5846,
+			"winper": 40.0,
+			"mvps": 685,
+			"shotaccuracy": 14.9,
+			"moneyearned": 28961900,
+			"topWeapon": "AK-47"
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "Unranked",
+			"flexqrank": "Unranked"
+		}
+	},
+	{
+		"username": "Stathogon",
+		"rocketleaguestats":
+		{
+			"wins": 0,
+			"goalshotratio": 0.0,
+			"goals": 0,
+			"shots": 0,
+			"assists": 0,
+			"saves": 0,
+			"mvps": 0,
+			"rank1s": "",
+			"mmr1s": 0,
+			"rank2s": "",
+			"mmr2s": 0,
+			"rank3s": "",
+			"mmr3s": 0
+		},
+		"valorantstats":
+		{
+			"adr": 138.1,
+			"kr": 0.0,
+			"kd": 0.92,
+			"hsper": 11.0,
+			"winper": 51.9,
+			"wins": 81,
+			"kills": 2326,
+			"deaths": 2526,
+			"assists": 860,
+			"headshots": 942,
+			"aces": 6,
+			"topagent": "Raze",
+			"topweapon": "Vandal",
+			"rating": "Gold 1"
+		},
+		"csgostats":
+		{
+			"wins": 511,
+			"kd": 1.0,
+			"kills": 21086,
+			"winper": 42.1,
+			"mvps": 2059,
+			"shotaccuracy": 21.6,
+			"moneyearned": 58841500,
+			"topWeapon": "AK-47"
+		},
+		"leagueoflegendsstats":
+		{
+			"soloqrank": "Silver 2",
+			"flexqrank": "Unranked"
+		}
+	}
+]
