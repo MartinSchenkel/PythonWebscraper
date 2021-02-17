@@ -1,4 +1,5 @@
 from selenium import webdriver
+import csv;
 
 class RocketLeagueStats:
     wins = 0 # Number of wins
@@ -338,6 +339,33 @@ def writeToJson():
     f.write(']\n')
     f.close()
 
+def writeToCSV():
+    filePathNameWExt = "./Data.csv"
+
+    header = ['username', 
+    'rocketleaguewins', 'rocketleaguegoalshotratio', 'rocketleaguegoals', 'rocketleagueshots', 'rocketleagueassists', 'rocketleaguesaves', 'rocketleaguemvps', 'rocketleaguerank1s', 'rocketleaguemmr1s', 'rocketleaguerank2s', 'rocketleaguemmr2s', 'rocketleaguerank3s', 'rocketleaguemmr3s',
+    'valorantadr', 'valorantkills/round', 'valorantk/d', 'valorantheadshotpercentage', 'valorantwinpercentage', 'valorantwins', 'valorantkills', 'valorantdeaths', 'valorantassists', 'valorantheadshots', 'valorantaces', 'valoranttopagent', 'valoranttopweapon', 'valorantrating',
+    'csgowins', 'csgok/d', 'csgokills', 'csgowinpercentage', 'csgomvps', 'csgoshotaccuracy', 'csgomoneyearned', 'csgotopweapon',
+    'lolsoloqrank', 'lolflexqrank']
+
+    f = open(filePathNameWExt, 'w', encoding="UTF-8", newline='')
+
+    writer = csv.writer(f)
+
+    writer.writerow(header)
+
+    for u in users:
+        row = [u.userName,
+        str(u.rlStats.wins), str(u.rlStats.goalShotRatio), str(u.rlStats.goals), str(u.rlStats.shots), str(u.rlStats.assists), str(u.rlStats.saves), str(u.rlStats.mvps), str(u.rlStats.rank1s), str(u.rlStats.mmr1s), str(u.rlStats.rank2s), str(u.rlStats.mmr2s), str(u.rlStats.rank3s), str(u.rlStats.mmr3s),
+        str(u.valStats.adr), str(u.valStats.kr), str(u.valStats.kd), str(u.valStats.hsper), str(u.valStats.winper), str(u.valStats.wins), str(u.valStats.kills), str(u.valStats.deaths), str(u.valStats.assists), str(u.valStats.headshots), str(u.valStats.aces), str(u.valStats.topAgent), str(u.valStats.topWeapon), str(u.valStats.rating),
+        str(u.csgoStats.wins), str(u.csgoStats.kd), str(u.csgoStats.kills), str(u.csgoStats.winper), str(u.csgoStats.mvp), str(u.csgoStats.shotacc), str(u.csgoStats.moneyearned), str(u.csgoStats.topWeapon),
+        str(u.lolStats.soloqrank), str(u.lolStats.flexqrank)]
+
+        writer.writerow(row)
+
+    f.close()
+   
+
 browser = webdriver.Chrome()
 
 getRocketLeagueStats()
@@ -345,6 +373,7 @@ getValorantStats()
 getCSGOStats()
 getLeagueOfLegendsStats()
 
-writeToJson()
+#writeToJson()
+writeToCSV()
 
 browser.quit()
