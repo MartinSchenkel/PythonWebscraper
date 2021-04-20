@@ -28,7 +28,7 @@ class ValorantStats:
     deaths = 0 # Number of deaths
     assists = 0 # Number of assists
     headshots = 0 # Number of Headshots
-    aces = 0 # Number of Aces
+    mostkills = 0 # Most Kills in a single match
     topAgent = '' # Name of most played agent
     topWeapon = '' # Name of weapon you scored the most kills with
     rating = '' # Name of the rank
@@ -88,14 +88,17 @@ martin.leagueOfLegendsURL = 'https://euw.op.gg/summoner/userName=KiddingYouAgain
 matti = User()
 matti.userName = 'Maku'
 matti.rocketLeagueURL = 'https://rocketleague.tracker.network/rocket-league/profile/steam/76561198353651815/overview'
-# TODO MATTIS CSGO DATEN 
 
 aaron = User()
 aaron.userName = 'Mistersauber'
-# TODO AARONS CSGO DATEN
+aaron.valorantURL = 'https://tracker.gg/valorant/profile/riot/schlecker422%23EUW/overview?playlist=competitive'
+aaron.leagueOfLegendsURL = 'https://euw.op.gg/summoner/userName=schlecker422'
+aaron.csgoURL = 'https://tracker.gg/csgo/profile/steam/76561198079297449/overview'
+aaron.csgoWeaponURL = 'https://tracker.gg/csgo/profile/steam/76561198079297449/weapons'
 
 patrick = User()
 patrick.userName = 'Pattifix'
+patrick.valorantURL= 'https://tracker.gg/valorant/profile/riot/pattifix%231337/overview?playlist=competitive'
 patrick.rocketLeagueURL = 'https://rocketleague.tracker.network/rocket-league/profile/steam/76561198143048248/overview'
 patrick.csgoURL = "https://tracker.gg/csgo/profile/steam/76561198143048248/overview"
 patrick.csgoWeaponURL = "https://tracker.gg/csgo/profile/steam/76561198143048248/weapons"
@@ -109,14 +112,14 @@ christoph.leagueOfLegendsURL = "https://euw.op.gg/summoner/userName=o0rainingsto
 
 malte = User()
 malte.userName = 'Stachosson'
-malte.valorantURL = "https://tracker.gg/valorant/profile/riot/StachoKuhlmann%234447/overview"
+malte.valorantURL = "https://tracker.gg/valorant/profile/riot/StachoKuhlmann%234447/overview?playlist=competitive"
 malte.csgoURL = 'https://tracker.gg/csgo/profile/steam/76561198143960916/overview'
 malte.csgoWeaponURL = 'https://tracker.gg/csgo/profile/steam/76561198143960916/weapons'
 malte.leagueOfLegendsURL = "https://euw.op.gg/summoner/userName=stachokuhlmann"
 
 janko = User()
 janko.userName = 'Stathogon'
-janko.valorantURL = "https://tracker.gg/valorant/profile/riot/Stathogon%23EUW/overview"
+janko.valorantURL = "https://tracker.gg/valorant/profile/riot/Stathogon%23EUW/overview?playlist=competitive"
 janko.csgoURL = 'https://tracker.gg/csgo/profile/steam/76561198092006241/overview'
 janko.csgoWeaponURL = 'https://tracker.gg/csgo/profile/steam/76561198092006241/weapons'
 janko.leagueOfLegendsURL = "https://euw.op.gg/summoner/userName=stathogon"
@@ -129,19 +132,19 @@ def getRocketLeagueStats():
     for u in users:
         if u.rocketLeagueURL != '':
             browser.get(u.rocketLeagueURL)
-            u.rlStats.wins = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/aside/div[2]/div/div[1]/div/div[2]/span[2]').text
-            u.rlStats.goalShotRatio = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/aside/div[2]/div/div[2]/div/div[2]/span[2]').text
-            u.rlStats.goals = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/aside/div[2]/div/div[3]/div/div[2]/span[2]').text
-            u.rlStats.shots = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/aside/div[2]/div/div[4]/div/div[2]/span[2]').text
-            u.rlStats.assists = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/aside/div[2]/div/div[5]/div/div[2]/span[2]').text
-            u.rlStats.saves = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/aside/div[2]/div/div[6]/div/div[2]/span[2]').text
-            u.rlStats.mvps = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/aside/div[2]/div/div[7]/div/div[2]/span[2]').text
-            u.rlStats.rank1s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[2]/td[2]/div[2]').text
+            u.rlStats.wins = browser.find_element_by_xpath('//*[@title="Wins"]/following-sibling::span').text
+            u.rlStats.goalShotRatio = browser.find_element_by_xpath('//*[@title="Goal Shot Ratio"]/following-sibling::span').text
+            u.rlStats.goals = browser.find_element_by_xpath('//*[@title="Goals"]/following-sibling::span').text
+            u.rlStats.shots = browser.find_element_by_xpath('//*[@title="Shots"]/following-sibling::span').text
+            u.rlStats.assists = browser.find_element_by_xpath('//*[@title="Assists"]/following-sibling::span').text
+            u.rlStats.saves = browser.find_element_by_xpath('//*[@title="Saves"]/following-sibling::span').text
+            u.rlStats.mvps = browser.find_element_by_xpath('//*[@title="MVPs"]/following-sibling::span').text
+            u.rlStats.rank1s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[1]/td[2]/div[2]').text
             u.rlStats.mmr1s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[2]/td[3]/div/div[2]/div[1]/div').text
-            u.rlStats.rank2s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[3]/td[2]/div[2]').text
-            u.rlStats.mmr2s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[3]/td[3]/div/div[2]/div[1]/div').text
-            u.rlStats.rank3s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[4]/td[2]/div[2]').text
-            u.rlStats.mmr3s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[4]/td[3]/div/div[2]/div[1]/div').text
+            u.rlStats.rank2s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[2]/td[2]/div[2]').text
+            u.rlStats.mmr2s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[2]/td[3]/div/div[2]/div[1]/div').text
+            u.rlStats.rank3s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[3]/td[2]/div[2]').text
+            u.rlStats.mmr3s = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[2]/table/tbody/tr[3]/td[3]/div/div[2]/div[1]/div').text
             
             u.rlStats.wins  = int(''.join([i for i in str(u.rlStats.wins) if not i == "," and not i == "%"]))
             u.rlStats.goalShotRatio  = float(''.join([i for i in str(u.rlStats.goalShotRatio) if not i == "," and not i == "%"]))
@@ -176,19 +179,19 @@ def getValorantStats():
     for u in users:
         if u.valorantURL != '':
             browser.get(u.valorantURL)
-            u.valStats.adr = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[3]/div[1]/div/div[1]/span[2]').text
-            u.valStats.kd = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[3]/div[2]/div/div[1]/span[2]').text
-            u.valStats.hsper = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[3]/div[3]/div/div[1]/span[2]').text
-            u.valStats.winper = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[3]/div[4]/div/div[1]/span[2]').text
-            u.valStats.wins = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[5]/div[1]/div/div[1]/span[2]').text
-            u.valStats.kills = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[5]/div[2]/div/div[1]/span[2]').text
-            u.valStats.deaths = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[5]/div[4]/div/div[1]/span[2]').text
-            u.valStats.assists = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[5]/div[5]/div/div[1]/span[2]').text
-            u.valStats.headshots = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[5]/div[3]/div/div[1]/span[2]').text
-            u.valStats.aces = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[5]/div[9]/div/div[1]/span[2]').text
-            u.valStats.topAgent = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[5]/div/div/table/tbody/tr[1]/td[1]/div/span').text
-            u.valStats.topWeapon = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[2]/div/div/div[1]/div[1]/div[1]').text
-            u.valStats.rating = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[3]/div[4]/div[2]/div[2]/div/div[1]/div[1]/span[2]').text
+            u.valStats.adr = browser.find_element_by_xpath('//*[@title="Damage/Round"]/following-sibling::span').text
+            u.valStats.kd = browser.find_element_by_xpath('//*[@title="K/D Ratio"]/following-sibling::span').text
+            u.valStats.hsper = browser.find_element_by_xpath('//*[@title="Headshots %"]/following-sibling::span').text
+            u.valStats.winper = browser.find_element_by_xpath('//*[@title="Win %"]/following-sibling::span').text
+            u.valStats.wins = browser.find_element_by_xpath('//*[@title="Wins"]/following-sibling::span').text
+            u.valStats.kills = browser.find_element_by_xpath('//*[@title="Kills"]/following-sibling::span').text
+            u.valStats.deaths = browser.find_element_by_xpath('//*[@title="Deaths"]/following-sibling::span').text
+            u.valStats.assists = browser.find_element_by_xpath('//*[@title="Assists"]/following-sibling::span').text
+            u.valStats.headshots = browser.find_element_by_xpath('//*[@title="Headshots"]/following-sibling::span').text
+            u.valStats.mostkills = browser.find_element_by_xpath('//*[@title="Most Kills (Match)"]/following-sibling::span').text
+            u.valStats.topAgent = browser.find_element_by_xpath('//*[@class="agent__name"]').text
+            u.valStats.topWeapon = browser.find_element_by_xpath('//*[@class="weapon__name"]').text
+            u.valStats.rating = browser.find_element_by_xpath('//*[@class="valorant-highlighted-stat__value"]').text
 
             u.valStats.adr  = float(''.join([i for i in str(u.valStats.adr) if not i == "," and not i == "%"]))
             u.valStats.kr  = float(''.join([i for i in str(u.valStats.kr) if not i == "," and not i == "%"]))
@@ -200,7 +203,7 @@ def getValorantStats():
             u.valStats.deaths  = int(''.join([i for i in str(u.valStats.deaths) if not i == "," and not i == "%"]))
             u.valStats.assists  = int(''.join([i for i in str(u.valStats.assists) if not i == "," and not i == "%"]))
             u.valStats.headshots  = int(''.join([i for i in str(u.valStats.headshots) if not i == "," and not i == "%"]))
-            u.valStats.aces  = int(''.join([i for i in str(u.valStats.aces) if not i == "," and not i == "%"]))
+            u.valStats.mostkills  = int(''.join([i for i in str(u.valStats.mostkills) if not i == "," and not i == "%"]))
 
             print("----------UserStats------------")
             print(u.userName)
@@ -213,7 +216,7 @@ def getValorantStats():
             print(u.valStats.deaths)
             print(u.valStats.assists)
             print(u.valStats.headshots)
-            print(u.valStats.aces)
+            print(u.valStats.mostkills)
             print(u.valStats.topAgent)
             print(u.valStats.topWeapon)
             print(u.valStats.rating)
@@ -223,17 +226,17 @@ def getCSGOStats():
         if u.csgoURL != '' and u.csgoWeaponURL != '':
             browser.get(u.csgoURL)
             
-            u.csgoStats.wins = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[5]/div[3]/div/div[2]/span[2]').text
-            u.csgoStats.kd = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[3]/div[1]/div/div[2]/span[2]').text
-            u.csgoStats.kills = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[3]/div[2]/div/div[2]/span[2]').text
-            u.csgoStats.winper = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[3]/div[3]/div/div[2]/span[2]').text
-            u.csgoStats.mvp = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[3]/div[4]/div/div[2]/span[2]').text
-            u.csgoStats.shotacc = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[5]/div[8]/div/div[2]/span[2]').text
-            u.csgoStats.moneyearned = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div[1]/div[5]/div[6]/div/div[2]/span[2]').text
+            u.csgoStats.wins = browser.find_element_by_xpath('//*[@title="Wins"]/following-sibling::span').text
+            u.csgoStats.kd = browser.find_element_by_xpath('//*[@title="K/D"]/following-sibling::span').text
+            u.csgoStats.kills = browser.find_element_by_xpath('//*[@title="Kills"]/following-sibling::span').text
+            u.csgoStats.winper = browser.find_element_by_xpath('//*[@title="Win %"]/following-sibling::span').text
+            u.csgoStats.mvp = browser.find_element_by_xpath('//*[@title="MVP"]/following-sibling::span').text
+            u.csgoStats.shotacc = browser.find_element_by_xpath('//*[@title="Shots Accuracy"]/following-sibling::span').text
+            u.csgoStats.moneyearned = browser.find_element_by_xpath('//*[@title="Money Earned"]/following-sibling::span').text
 
             browser.get(u.csgoWeaponURL)
             
-            u.csgoStats.topWeapon = browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/main/div[2]/div[3]/div[1]/div/div/div/div[1]/div/div/div[1]/h3').text
+            u.csgoStats.topWeapon = browser.find_element_by_xpath('//*[@class="weapon-preview"]/h3[1]').text
 
             u.csgoStats.wins  = int(''.join([i for i in str(u.csgoStats.wins) if not i == "," and not i == "%"]))
             u.csgoStats.kd  = float(''.join([i for i in str(u.csgoStats.kd) if not i == "," and not i == "%"]))
@@ -260,8 +263,16 @@ def getLeagueOfLegendsStats():
         if u.leagueOfLegendsURL != '':
             browser.get(u.leagueOfLegendsURL)
 
-            u.lolStats.soloqrank = browser.find_element_by_xpath('//*[@id="SummonerLayoutContent"]/div[2]/div[1]/div[1]/div/div[2]/div[2]').text
-            u.lolStats.flexqrank = browser.find_element_by_xpath('//*[@id="SummonerLayoutContent"]/div[2]/div[1]/div[2]/div/div[2]').text
+            try: 
+                u.lolStats.soloqrank = browser.find_element_by_xpath('//*[@class="TierRank"]').text
+
+            except:
+                u.lolStats.soloqrank = "Unranked"
+
+            try:
+                u.lolStats.flexqrank = browser.find_element_by_xpath('//*[@class="sub-tier__rank-tier "]').text
+            except:
+                u.lolStats.flexqrank = "Unranked"
 
             print("----------UserStats------------")
             print(u.userName)
@@ -306,7 +317,7 @@ def writeToJson():
         f.write('\t\t\t"deaths": ' + str(u.valStats.deaths) + ',\n')
         f.write('\t\t\t"assists": ' + str(u.valStats.assists) + ',\n')
         f.write('\t\t\t"headshots": ' + str(u.valStats.headshots) + ',\n')
-        f.write('\t\t\t"aces": ' + str(u.valStats.aces) + ',\n')
+        f.write('\t\t\t"mostkills": ' + str(u.valStats.mostkills) + ',\n')
         f.write('\t\t\t"topagent": "' + u.valStats.topAgent + '",\n')
         f.write('\t\t\t"topweapon": "' + u.valStats.topWeapon + '",\n')
         f.write('\t\t\t"rating": "' + u.valStats.rating + '"\n')
@@ -344,7 +355,7 @@ def writeToCSV():
 
     header = ['username', 
     'rocketleaguewins', 'rocketleaguegoalshotratio', 'rocketleaguegoals', 'rocketleagueshots', 'rocketleagueassists', 'rocketleaguesaves', 'rocketleaguemvps', 'rocketleaguerank1s', 'rocketleaguemmr1s', 'rocketleaguerank2s', 'rocketleaguemmr2s', 'rocketleaguerank3s', 'rocketleaguemmr3s',
-    'valorantadr', 'valorantkills/round', 'valorantk/d', 'valorantheadshotpercentage', 'valorantwinpercentage', 'valorantwins', 'valorantkills', 'valorantdeaths', 'valorantassists', 'valorantheadshots', 'valorantaces', 'valoranttopagent', 'valoranttopweapon', 'valorantrating',
+    'valorantadr', 'valorantkills/round', 'valorantk/d', 'valorantheadshotpercentage', 'valorantwinpercentage', 'valorantwins', 'valorantkills', 'valorantdeaths', 'valorantassists', 'valorantheadshots', 'valorantmostkills', 'valoranttopagent', 'valoranttopweapon', 'valorantrating',
     'csgowins', 'csgok/d', 'csgokills', 'csgowinpercentage', 'csgomvps', 'csgoshotaccuracy', 'csgomoneyearned', 'csgotopweapon',
     'lolsoloqrank', 'lolflexqrank']
 
@@ -357,7 +368,7 @@ def writeToCSV():
     for u in users:
         row = [u.userName,
         str(u.rlStats.wins), str(u.rlStats.goalShotRatio), str(u.rlStats.goals), str(u.rlStats.shots), str(u.rlStats.assists), str(u.rlStats.saves), str(u.rlStats.mvps), str(u.rlStats.rank1s), str(u.rlStats.mmr1s), str(u.rlStats.rank2s), str(u.rlStats.mmr2s), str(u.rlStats.rank3s), str(u.rlStats.mmr3s),
-        str(u.valStats.adr), str(u.valStats.kr), str(u.valStats.kd), str(u.valStats.hsper), str(u.valStats.winper), str(u.valStats.wins), str(u.valStats.kills), str(u.valStats.deaths), str(u.valStats.assists), str(u.valStats.headshots), str(u.valStats.aces), str(u.valStats.topAgent), str(u.valStats.topWeapon), str(u.valStats.rating),
+        str(u.valStats.adr), str(u.valStats.kr), str(u.valStats.kd), str(u.valStats.hsper), str(u.valStats.winper), str(u.valStats.wins), str(u.valStats.kills), str(u.valStats.deaths), str(u.valStats.assists), str(u.valStats.headshots), str(u.valStats.mostkills), str(u.valStats.topAgent), str(u.valStats.topWeapon), str(u.valStats.rating),
         str(u.csgoStats.wins), str(u.csgoStats.kd), str(u.csgoStats.kills), str(u.csgoStats.winper), str(u.csgoStats.mvp), str(u.csgoStats.shotacc), str(u.csgoStats.moneyearned), str(u.csgoStats.topWeapon),
         str(u.lolStats.soloqrank), str(u.lolStats.flexqrank)]
 
